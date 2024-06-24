@@ -18,6 +18,7 @@ test('zerostep example', async ({ page }) => {
 
   await ai("Add item 'Sauce Labs Onesie' to basket", zeroStepArgs)
   await ai("Add item 'Sauce Labs Bike Light' to basket", zeroStepArgs)
+  // await ai("Add item 'something something' to basket", zeroStepArgs) // Incorrect prompt
   const numberOfItems = await ai("How many items in the cart", zeroStepArgs)
   console.log('numberOfItems ->', numberOfItems)
   expect(numberOfItems).toEqual('2')
